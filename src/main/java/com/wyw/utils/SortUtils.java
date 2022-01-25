@@ -11,6 +11,16 @@ public class SortUtils {
         return true;
     }
 
+    public static boolean swap(int[] arr, int x, int y) {
+        if (x < 0 || y < 0 || x >= arr.length || y >= arr.length) {
+            return false;
+        }
+        int val = arr[x];
+        arr[x] = arr[y];
+        arr[y] = val;
+        return true;
+    }
+
     public static <T extends Comparable<T>> boolean less(T x, T y) {
         return x.compareTo(y) < 0;
     }

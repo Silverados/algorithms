@@ -18,15 +18,15 @@ public class Subset {
         }
 
         List<Integer> temp = new ArrayList<>();
-        dfs(nums, res, temp, 0);
+        backtrace(nums, res, temp, 0);
         return res;
     }
 
-    private static void dfs(int[] nums, List<List<Integer>> res, List<Integer> list, int index) {
+    private static void backtrace(int[] nums, List<List<Integer>> res, List<Integer> list, int index) {
         res.add(new ArrayList<>(list));
         for (int i = index; i < nums.length; i++) {
             list.add(nums[i]);
-            dfs(nums, res, list, i + 1);
+            backtrace(nums, res, list, i + 1);
             list.remove(list.size() - 1);
         }
     }
