@@ -56,6 +56,8 @@ public class ArithmeticSlices {
             for (int j = i + 1; j < nums.length - 1; j++) {
                 if (nums[j + 1] - nums[j] == nums[i + 1] - nums[i]) {
                     res++;
+                } else {
+                    break;
                 }
             }
         }
@@ -64,7 +66,9 @@ public class ArithmeticSlices {
     }
 
     public static void main(String[] args) {
-        System.out.println(numberOfArithmeticSlices(new int[]{1, 2, 3, 4, 5}));
-        System.out.println(numberOfArithmeticSlices_Base(new int[]{1, 2, 3, 4, 5}));
+//        System.out.println(numberOfArithmeticSlices(new int[]{1, 2, 3, 4, 5}));
+        System.out.println(numberOfArithmeticSlices_Base(new int[]{1, 2, 3, 4}));
+        System.out.println(numberOfArithmeticSlices_Base(new int[]{1}));
+        System.out.println(numberOfArithmeticSlices_Base(new int[]{1, 2, 3, 8, 9, 10}));
     }
 }
