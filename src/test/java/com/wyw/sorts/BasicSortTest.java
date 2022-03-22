@@ -9,9 +9,9 @@ import java.util.function.Consumer;
 public class BasicSortTest {
     static void sort(SortAlgorithm sortAlgorithm) {
         int testTime = 100;
-        int arrayLength = 100;
-        int origin = -1000000;
-        int bound = 10000000;
+        int arrayLength = 10000;
+        int origin = -1000;
+        int bound = 10000;
         sort(sortAlgorithm, testTime, arrayLength, origin, bound);
     }
 

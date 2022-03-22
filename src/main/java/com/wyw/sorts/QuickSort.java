@@ -31,7 +31,7 @@ public class QuickSort implements SortAlgorithm{
             } else if (greater(unsorted[left], unsorted[right])) {
                 swap(unsorted, left, --more);
             } else {
-                less++;
+                left++;
             }
         }
         swap(unsorted, more, right);
